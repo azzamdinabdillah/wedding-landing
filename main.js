@@ -45,32 +45,54 @@ function initializeNavigation() {
   const navbar = document.getElementById('navbar')
   const mobileMenuBtn = document.getElementById('mobile-menu-btn')
   const mobileMenu = document.getElementById('mobile-menu')
-  const navLinks = document.querySelectorAll('.nav-link')
+  const navLinks = document.querySelectorAll('.nav-link, .nav-link-new, .mobile-nav-link')
   
-  // Mobile menu toggle
+  // Mobile menu toggle with animation
   mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden')
+    mobileMenuBtn.classList.toggle('active')
+    
+    // Add slide animation
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('active')
+    } else {
+      mobileMenu.classList.remove('active')
+    }
   })
   
   // Close mobile menu when clicking on a link
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden')
+      mobileMenu.classList.remove('active')
+      mobileMenuBtn.classList.remove('active')
     })
   })
   
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('shadow-lg')
-      navbar.classList.remove('bg-white/90')
-      navbar.classList.add('bg-white')
-    } else {
-      navbar.classList.remove('shadow-lg')
-      navbar.classList.remove('bg-white')
-      navbar.classList.add('bg-white/90')
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden')
+      mobileMenu.classList.remove('active')
+      mobileMenuBtn.classList.remove('active')
     }
   })
+  
+  // Enhanced navbar scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled')
+      navbar.classList.remove('navbar-transparent')
+    } else {
+      navbar.classList.remove('navbar-scrolled')
+      navbar.classList.add('navbar-transparent')
+    }
+  })
+  
+  // Set initial state
+  if (window.scrollY <= 50) {
+    navbar.classList.add('navbar-transparent')
+  }
   
   // Smooth scrolling for navigation links
   navLinks.forEach(link => {
@@ -80,12 +102,24 @@ function initializeNavigation() {
       const targetElement = document.getElementById(targetId)
       
       if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 70
+        const offsetTop = targetElement.offsetTop - 80
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
         })
       }
+    })
+  })
+  
+  // Add hover effects for desktop nav links
+  const desktopNavLinks = document.querySelectorAll('.nav-link-new')
+  desktopNavLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.style.transform = 'translateY(-2px)'
+    })
+    
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'translateY(0)'
     })
   })
 }
@@ -290,16 +324,16 @@ function initializeAnimations() {
 // Scroll effects
 function initializeScrollEffects() {
   // Parallax effect for hero section
-  gsap.to('#home', {
-    yPercent: -50,
-    ease: "none",
-    scrollTrigger: {
-      trigger: '#home',
-      start: "top top",
-      end: "bottom top",
-      scrub: true
-    }
-  })
+  // gsap.to('#home', {
+  //   yPercent: -50,
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: '#home',
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: true
+  //   }
+  // })
   
   // Navbar active link highlighting
   const sections = document.querySelectorAll('section[id]')
