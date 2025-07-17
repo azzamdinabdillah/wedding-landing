@@ -302,23 +302,23 @@ function initializeAnimations() {
   })
   
   // Animate timeline items
-  const timelineItems = document.querySelectorAll('.timeline-item')
-  timelineItems.forEach((item, index) => {
-    gsap.fromTo(item,
-      { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 85%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    )
-  })
+  // const timelineItems = document.querySelectorAll('.timeline-item')
+  // timelineItems.forEach((item, index) => {
+  //   gsap.fromTo(item,
+  //     { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+  //     {
+  //       opacity: 1,
+  //       x: 0,
+  //       duration: 1,
+  //       ease: "power2.out",
+  //       scrollTrigger: {
+  //         trigger: item,
+  //         start: "top 85%",
+  //         toggleActions: "play none none reverse"
+  //       }
+  //     }
+  //   )
+  // })
 }
 
 // Scroll effects
