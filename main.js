@@ -19,10 +19,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 // Initialize AOS
 AOS.init({
-  duration: 800,
+  duration: 500,
   easing: 'ease-in-out',
-  once: true,
-  mirror: false
+  // once: true,
+  // mirror: false
 })
 
 // Initialize EmailJS
@@ -31,12 +31,12 @@ emailjs.init("YOUR_USER_ID") // Replace with your EmailJS user ID
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
   initializeNavigation()
-  initializeHero()
+  // initializeHero()
   initializeCountdown()
   initializeGallery()
   initializeRSVP()
   initializeTilt()
-  initializeAnimations()
+  // initializeAnimations()
   initializeScrollEffects()
 })
 
@@ -125,47 +125,43 @@ function initializeNavigation() {
 }
 
 // Hero section animations
-function initializeHero() {
-  const heroTitle = document.querySelector('#home h1')
-  const heroSubtitle = document.querySelector('#home p')
+// function initializeHero() {
+//   const heroTitle = document.querySelector('#home h1')
+//   const heroSubtitle = document.querySelector('#home p')
   
-  if (heroTitle && heroSubtitle) {
-    gsap.fromTo(heroTitle, 
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1.5, ease: "power2.out" }
-    )
+//   if (heroTitle && heroSubtitle) {
+//     gsap.fromTo(heroTitle, 
+//       { opacity: 0, y: 50 },
+//       { opacity: 1, y: 0, duration: 1.5, ease: "power2.out" }
+//     )
     
-    gsap.fromTo(heroSubtitle, 
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: "power2.out" }
-    )
-  }
-}
+//     gsap.fromTo(heroSubtitle, 
+//       { opacity: 0, y: 30 },
+//       { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: "power2.out" }
+//     )
+//   }
+// }
 
-// Countdown timer
+// Countdown timer using countdown.js
 function initializeCountdown() {
-  const weddingDate = new Date('2024-06-15T16:00:00')
-  const daysElement = document.getElementById('days')
-  const hoursElement = document.getElementById('hours')
-  const minutesElement = document.getElementById('minutes')
-  const secondsElement = document.getElementById('seconds')
-  
+  // Set the countdown target to 10 days from now
+  const now = new Date();
+  const targetDate = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
+  const daysElement = document.getElementById('days');
+  const hoursElement = document.getElementById('hours');
+  const minutesElement = document.getElementById('minutes');
+  const secondsElement = document.getElementById('seconds');
+
   function updateCountdown() {
-    const now = new Date()
-    
-    const days = differenceInDays(weddingDate, now)
-    const hours = differenceInHours(weddingDate, now) % 24
-    const minutes = differenceInMinutes(weddingDate, now) % 60
-    const seconds = differenceInSeconds(weddingDate, now) % 60
-    
-    if (daysElement) daysElement.textContent = days.toString().padStart(2, '0')
-    if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0')
-    if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0')
-    if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0')
+    const timespan = countdown(null, targetDate, countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+    if (daysElement) daysElement.textContent = String(timespan.days).padStart(2, '0');
+    if (hoursElement) hoursElement.textContent = String(timespan.hours).padStart(2, '0');
+    if (minutesElement) minutesElement.textContent = String(timespan.minutes).padStart(2, '0');
+    if (secondsElement) secondsElement.textContent = String(timespan.seconds).padStart(2, '0');
   }
-  
-  updateCountdown()
-  setInterval(updateCountdown, 1000)
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 }
 
 // Gallery with lightbox
@@ -259,67 +255,67 @@ function initializeTilt() {
 }
 
 // GSAP animations
-function initializeAnimations() {
-  // Animate sections on scroll
-  gsap.utils.toArray('section').forEach((section, index) => {
-    if (section.id !== 'home') {
-      gsap.fromTo(section, 
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1, 
-          y: 0, 
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      )
-    }
-  })
+// function initializeAnimations() {
+//   // Animate sections on scroll
+//   gsap.utils.toArray('section').forEach((section, index) => {
+//     if (section.id !== 'home') {
+//       gsap.fromTo(section, 
+//         { opacity: 0, y: 50 },
+//         {
+//           opacity: 1, 
+//           y: 0, 
+//           duration: 1,
+//           ease: "power2.out",
+//           scrollTrigger: {
+//             trigger: section,
+//             start: "top 80%",
+//             end: "bottom 20%",
+//             toggleActions: "play none none reverse"
+//           }
+//         }
+//       )
+//     }
+//   })
   
-  // Animate gallery items
-  const galleryItems = document.querySelectorAll('.gallery-item')
-  galleryItems.forEach((item, index) => {
-    gsap.fromTo(item,
-      { opacity: 0, scale: 0.8 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        delay: index * 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    )
-  })
+//   // Animate gallery items
+//   const galleryItems = document.querySelectorAll('.gallery-item')
+//   galleryItems.forEach((item, index) => {
+//     gsap.fromTo(item,
+//       { opacity: 0, scale: 0.8 },
+//       {
+//         opacity: 1,
+//         scale: 1,
+//         duration: 0.8,
+//         delay: index * 0.1,
+//         ease: "power2.out",
+//         scrollTrigger: {
+//           trigger: item,
+//           start: "top 90%",
+//           toggleActions: "play none none reverse"
+//         }
+//       }
+//     )
+//   })
   
-  // Animate timeline items
-  // const timelineItems = document.querySelectorAll('.timeline-item')
-  // timelineItems.forEach((item, index) => {
-  //   gsap.fromTo(item,
-  //     { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-  //     {
-  //       opacity: 1,
-  //       x: 0,
-  //       duration: 1,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: item,
-  //         start: "top 85%",
-  //         toggleActions: "play none none reverse"
-  //       }
-  //     }
-  //   )
-  // })
-}
+//   // Animate timeline items
+//   // const timelineItems = document.querySelectorAll('.timeline-item')
+//   // timelineItems.forEach((item, index) => {
+//   //   gsap.fromTo(item,
+//   //     { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+//   //     {
+//   //       opacity: 1,
+//   //       x: 0,
+//   //       duration: 1,
+//   //       ease: "power2.out",
+//   //       scrollTrigger: {
+//   //         trigger: item,
+//   //         start: "top 85%",
+//   //         toggleActions: "play none none reverse"
+//   //       }
+//   //     }
+//   //   )
+//   // })
+// }
 
 // Scroll effects
 function initializeScrollEffects() {
@@ -359,17 +355,17 @@ function initializeScrollEffects() {
 }
 
 // Utility functions
-function debounce(func, wait) {
-  let timeout
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout)
-      func(...args)
-    }
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-  }
-}
+// function debounce(func, wait) {
+//   let timeout
+//   return function executedFunction(...args) {
+//     const later = () => {
+//       clearTimeout(timeout)
+//       func(...args)
+//     }
+//     clearTimeout(timeout)
+//     timeout = setTimeout(later, wait)
+//   }
+// }
 
 // Performance optimization
 function optimizeImages() {
@@ -393,7 +389,7 @@ function optimizeImages() {
 }
 
 // Initialize image optimization
-optimizeImages()
+// optimizeImages()
 
 // Add loading states and error handling
 window.addEventListener('load', () => {
