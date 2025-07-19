@@ -1,28 +1,14 @@
 import './style.css'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Swiper from 'swiper'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 import GLightbox from 'glightbox'
-import { CountUp } from 'countup.js'
 import emailjs from 'emailjs-com'
 import VanillaTilt from 'vanilla-tilt'
-import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds } from 'date-fns'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger)
 
 // Initialize AOS
 AOS.init({
   duration: 500,
   easing: 'ease-in-out',
-  // once: true,
-  // mirror: false
 })
 
 // Initialize EmailJS
@@ -31,12 +17,10 @@ emailjs.init("YOUR_USER_ID") // Replace with your EmailJS user ID
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
   initializeNavigation()
-  // initializeHero()
   initializeCountdown()
   initializeGallery()
   initializeRSVP()
   initializeTilt()
-  // initializeAnimations()
   initializeScrollEffects()
 })
 
@@ -123,24 +107,6 @@ function initializeNavigation() {
     })
   })
 }
-
-// Hero section animations
-// function initializeHero() {
-//   const heroTitle = document.querySelector('#home h1')
-//   const heroSubtitle = document.querySelector('#home p')
-  
-//   if (heroTitle && heroSubtitle) {
-//     gsap.fromTo(heroTitle, 
-//       { opacity: 0, y: 50 },
-//       { opacity: 1, y: 0, duration: 1.5, ease: "power2.out" }
-//     )
-    
-//     gsap.fromTo(heroSubtitle, 
-//       { opacity: 0, y: 30 },
-//       { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: "power2.out" }
-//     )
-//   }
-// }
 
 // Countdown timer using countdown.js
 function initializeCountdown() {
@@ -321,83 +287,8 @@ function initializeTilt() {
   })
 }
 
-// GSAP animations
-// function initializeAnimations() {
-//   // Animate sections on scroll
-//   gsap.utils.toArray('section').forEach((section, index) => {
-//     if (section.id !== 'home') {
-//       gsap.fromTo(section, 
-//         { opacity: 0, y: 50 },
-//         {
-//           opacity: 1, 
-//           y: 0, 
-//           duration: 1,
-//           ease: "power2.out",
-//           scrollTrigger: {
-//             trigger: section,
-//             start: "top 80%",
-//             end: "bottom 20%",
-//             toggleActions: "play none none reverse"
-//           }
-//         }
-//       )
-//     }
-//   })
-  
-//   // Animate gallery items
-//   const galleryItems = document.querySelectorAll('.gallery-item')
-//   galleryItems.forEach((item, index) => {
-//     gsap.fromTo(item,
-//       { opacity: 0, scale: 0.8 },
-//       {
-//         opacity: 1,
-//         scale: 1,
-//         duration: 0.8,
-//         delay: index * 0.1,
-//         ease: "power2.out",
-//         scrollTrigger: {
-//           trigger: item,
-//           start: "top 90%",
-//           toggleActions: "play none none reverse"
-//         }
-//       }
-//     )
-//   })
-  
-//   // Animate timeline items
-//   // const timelineItems = document.querySelectorAll('.timeline-item')
-//   // timelineItems.forEach((item, index) => {
-//   //   gsap.fromTo(item,
-//   //     { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-//   //     {
-//   //       opacity: 1,
-//   //       x: 0,
-//   //       duration: 1,
-//   //       ease: "power2.out",
-//   //       scrollTrigger: {
-//   //         trigger: item,
-//   //         start: "top 85%",
-//   //         toggleActions: "play none none reverse"
-//   //       }
-//   //     }
-//   //   )
-//   // })
-// }
-
 // Scroll effects
 function initializeScrollEffects() {
-  // Parallax effect for hero section
-  // gsap.to('#home', {
-  //   yPercent: -50,
-  //   ease: "none",
-  //   scrollTrigger: {
-  //     trigger: '#home',
-  //     start: "top top",
-  //     end: "bottom top",
-  //     scrub: true
-  //   }
-  // })
-  
   // Navbar active link highlighting
   const sections = document.querySelectorAll('section[id]')
   const navLinks = document.querySelectorAll('.nav-link')
@@ -420,54 +311,6 @@ function initializeScrollEffects() {
     })
   })
 }
-
-// Utility functions
-// function debounce(func, wait) {
-//   let timeout
-//   return function executedFunction(...args) {
-//     const later = () => {
-//       clearTimeout(timeout)
-//       func(...args)
-//     }
-//     clearTimeout(timeout)
-//     timeout = setTimeout(later, wait)
-//   }
-// }
-
-// Performance optimization
-function optimizeImages() {
-  const images = document.querySelectorAll('img')
-  
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target
-        img.style.opacity = '0'
-        img.style.transition = 'opacity 0.5s ease'
-        img.onload = () => {
-          img.style.opacity = '1'
-        }
-        observer.unobserve(img)
-      }
-    })
-  })
-  
-  images.forEach(img => imageObserver.observe(img))
-}
-
-// Initialize image optimization
-// optimizeImages()
-
-// Add loading states and error handling
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded')
-  
-  // Hide loading spinner if you have one
-  const loader = document.getElementById('loader')
-  if (loader) {
-    loader.style.display = 'none'
-  }
-})
 
 // Error handling for failed resources
 window.addEventListener('error', (e) => {
