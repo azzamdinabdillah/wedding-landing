@@ -189,6 +189,9 @@ function initializeRSVP() {
   const form = document.getElementById('rsvp-form')
   const successMessage = document.getElementById('rsvp-success')
   
+  // Initialize custom radio buttons
+  initializeCustomRadioButtons()
+  
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault()
@@ -237,6 +240,70 @@ function initializeRSVP() {
         submitBtn.disabled = false
       }
     })
+  }
+}
+
+// Custom radio button functionality
+function initializeCustomRadioButtons() {
+  const radioGroups = document.querySelectorAll('input[type="radio"]')
+  
+  radioGroups.forEach(radio => {
+    const label = radio.closest('label')
+    const radioCard = label.querySelector('.radio-card')
+    const radioDot = label.querySelector('.radio-dot')
+    const radioInner = label.querySelector('.radio-inner')
+    
+    // Set initial state
+    if (radio.checked) {
+      updateRadioButtonState(label, true)
+    }
+    
+    // Handle click events
+    label.addEventListener('click', (e) => {
+      e.preventDefault()
+      
+      // Uncheck all radios in the same group
+      const name = radio.name
+      const allRadios = document.querySelectorAll(`input[name="${name}"]`)
+      allRadios.forEach(r => {
+        r.checked = false
+        const rLabel = r.closest('label')
+        updateRadioButtonState(rLabel, false)
+      })
+      
+      // Check the clicked radio
+      radio.checked = true
+      updateRadioButtonState(label, true)
+    })
+  })
+}
+
+// Update radio button visual state
+function updateRadioButtonState(label, isChecked) {
+  const radioCard = label.querySelector('.radio-card')
+  const radioDot = label.querySelector('.radio-dot')
+  const radioInner = label.querySelector('.radio-inner')
+  
+  if (isChecked) {
+    // Add selected styles
+    if (label.dataset.value === 'yes') {
+      radioCard.classList.add('border-dusty-rose', 'bg-dusty-rose/10', 'ring-4', 'ring-dusty-rose/20')
+      radioDot.classList.add('border-dusty-rose', 'bg-dusty-rose')
+    } else {
+      radioCard.classList.add('border-charcoal', 'bg-charcoal/10', 'ring-4', 'ring-charcoal/20')
+      radioDot.classList.add('border-charcoal', 'bg-charcoal')
+    }
+    radioInner.classList.add('opacity-100')
+  } else {
+    // Remove selected styles
+    if (label.dataset.value === 'yes') {
+      radioCard.classList.remove('border-dusty-rose', 'bg-dusty-rose/10', 'ring-4', 'ring-dusty-rose/20')
+      radioDot.classList.remove('border-dusty-rose', 'bg-dusty-rose')
+    } else {
+      radioCard.classList.remove('border-charcoal', 'bg-charcoal/10', 'ring-4', 'ring-charcoal/20')
+      radioDot.classList.remove('border-charcoal', 'bg-charcoal')
+    }
+    radioInner.classList.remove('opacity-100')
   }
 }
 
