@@ -624,7 +624,7 @@
           </div>
         </div>
         <!-- Main Event Cards -->
-        <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto mb-24">
+        <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto md:mb-24">
           <!-- Ceremony Card -->
           <div class="group" data-aos="fade-up" data-aos-delay="100">
             <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden card-hover border border-sage/50">
@@ -739,57 +739,60 @@
           </div>
         </div>
         <!-- Additional Information -->
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h3 class="font-serif text-3xl md:text-4xl font-semibold text-charcoal mb-4" data-aos="fade-up">
-              Additional Information
-            </h3>
-            <p class="text-lg text-charcoal/70" data-aos="fade-up" data-aos-delay="100">
-              Everything you need to know for our special day
+        <section class="max-w-7xl mx-auto px-4 py-20">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-4 bg-gradient-to-r from-sage/10 to-dusty-rose/10 rounded-full px-8 py-4 border border-sage/20">
+              <div class="w-10 h-10 bg-gradient-to-br from-sage to-dusty-rose rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-info-circle text-white text-lg"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-charcoal">Additional</h3>
+            </div>
+            <p class="text-charcoal/70 text-lg mt-4 max-w-2xl mx-auto">
+              Find extra information about dress code, accommodations, and transportation for our wedding day below.
             </p>
           </div>
-          <div class="grid md:grid-cols-3 gap-8">
+          <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 justify-center items-stretch">
             <!-- Dress Code -->
-            <div class="group" data-aos="fade-up" data-aos-delay="100">
-              <div class="bg-white rounded-xl p-8 w-full border border-dusty-rose/20 card-hover">
-                <div class="text-center">
-                  <div class="w-16 h-16 bg-dusty-rose/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-tshirt text-2xl text-dusty-rose"></i>
-                  </div>
-                  <h4 class="font-serif text-xl font-semibold text-charcoal mb-3">Dress Code</h4>
-                  <p class="text-lg font-medium text-charcoal/80 mb-2">Cocktail Attire</p>
-                  <p class="text-sm text-charcoal/60">Semi-formal, elegant attire</p>
+            <div class="group flex-1 flex flex-col bg-gradient-to-br from-white via-dusty-rose/5 to-gold/5 rounded-3xl border border-dusty-rose/20 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+              <div class="absolute -top-8 -right-8 w-32 h-32 bg-dusty-rose/10 rounded-full blur-2xl z-0"></div>
+              <div class="flex-1 flex flex-col items-center text-center px-8 py-12 relative z-10">
+                <div class="w-20 h-20 bg-dusty-rose/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow">
+                  <i class="fas fa-tshirt text-4xl text-dusty-rose"></i>
                 </div>
+                <h4 class="font-serif text-2xl font-semibold text-charcoal mb-2">Dress Code</h4>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-dusty-rose to-gold rounded-full mx-auto mb-4"></div>
+                <p class="text-lg font-medium text-charcoal/80 mb-1">Cocktail Attire</p>
+                <p class="text-base text-charcoal/60">Think semi-formal, elegant, and comfortable for a vineyard celebration.</p>
               </div>
             </div>
             <!-- Accommodations -->
-            <div class="group" data-aos="fade-up" data-aos-delay="200">
-              <div class="bg-white rounded-xl p-8 w-full border border-sage/20 card-hover">
-                <div class="text-center">
-                  <div class="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-bed text-2xl text-sage"></i>
-                  </div>
-                  <h4 class="font-serif text-xl font-semibold text-charcoal mb-3">Accommodations</h4>
-                  <p class="text-lg font-medium text-charcoal/80 mb-2">Room block available</p>
-                  <p class="text-sm text-charcoal/60">Use code "SARAHMICHAEL"</p>
+            <div class="group flex-1 flex flex-col bg-gradient-to-br from-white via-sage/5 to-dusty-rose/5 rounded-3xl border border-sage/20 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+              <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-sage/10 rounded-full blur-2xl z-0"></div>
+              <div class="flex-1 flex flex-col items-center text-center px-8 py-12 relative z-10">
+                <div class="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow">
+                  <i class="fas fa-bed text-4xl text-sage"></i>
                 </div>
+                <h4 class="font-serif text-2xl font-semibold text-charcoal mb-2">Accommodations</h4>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-sage to-dusty-rose rounded-full mx-auto mb-4"></div>
+                <p class="text-lg font-medium text-charcoal/80 mb-1">Room Block Available</p>
+                <p class="text-base text-charcoal/60">Reserve with code <span class="font-mono bg-sage/10 px-2 py-0.5 rounded">SARAHMICHAEL</span> for special rates.</p>
               </div>
             </div>
             <!-- Transportation -->
-            <div class="group" data-aos="fade-up" data-aos-delay="300">
-              <div class="bg-white rounded-xl p-8 w-full border border-gold/20 card-hover">
-                <div class="text-center">
-                  <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-car text-2xl text-gold"></i>
-                  </div>
-                  <h4 class="font-serif text-xl font-semibold text-charcoal mb-3">Transportation</h4>
-                  <p class="text-lg font-medium text-charcoal/80 mb-2">Shuttle provided</p>
-                  <p class="text-sm text-charcoal/60">From hotel to venue</p>
+            <div class="group flex-1 flex flex-col bg-gradient-to-br from-white via-gold/5 to-sage/5 rounded-3xl border border-gold/20 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+              <div class="absolute -top-8 -left-8 w-32 h-32 bg-gold/10 rounded-full blur-2xl z-0"></div>
+              <div class="flex-1 flex flex-col items-center text-center px-8 py-12 relative z-10">
+                <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow">
+                  <i class="fas fa-car text-4xl text-gold"></i>
                 </div>
+                <h4 class="font-serif text-2xl font-semibold text-charcoal mb-2">Transportation</h4>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-gold to-sage rounded-full mx-auto mb-4"></div>
+                <p class="text-lg font-medium text-charcoal/80 mb-1">Shuttle Service</p>
+                <p class="text-base text-charcoal/60">Complimentary shuttles run from the hotel to the venue and back.</p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
@@ -889,7 +892,7 @@
             <div class="relative transition-all before:hidden md:before:block before:content-[''] before:absolute before:left-1/2 before:top-0 before:h-full before:w-1 before:bg-dusty-rose before:-translate-x-1/2 before:z-0 flex md:flex-row flex-col items-center" data-aos="fade" data-aos-delay="50">
               <div class="md:w-1/2 order-1 hidden md:block"></div>
               <div class="w-12 h-12 hidden text-xl md:flex bg-gold rounded-full items-center justify-center text-white font-bold shadow-lg mx-auto md:mx-0 order-2 md:order-2 mb-4 md:mb-0 z-20">2</div>
-              <div class="md:w-1/2 md:pl-8 flex justify-start order-3 md:order-3">
+              <div class="w-full md:w-1/2 md:pl-8 flex justify-start order-3 md:order-3">
                 <div class="relative w-full md:max-w-md bg-gradient-to-br from-white via-gold/10 to-sage/10 border border-gold/20 rounded-2xl shadow-sm overflow-visible px-0 py-0 group transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
                   <!-- Large right-side emoji badge -->
                   <div class="absolute scale-125 -right-8 top-1/2 -translate-y-1/2 z-20 hidden md:flex">
@@ -957,7 +960,7 @@
             </div>
             <!-- Event 3: Dinner & Toasts -->
             <div class="relative transition-all before:hidden md:before:block before:content-[''] before:absolute before:left-1/2 before:top-0 before:h-full before:w-1 before:bg-dusty-rose before:-translate-x-1/2 before:z-0 flex md:flex-row flex-col items-center" data-aos="fade" data-aos-delay="100">
-              <div class="md:w-1/2 md:pr-8 flex justify-end order-2 md:order-1">
+              <div class="w-full md:w-1/2 md:pr-8 flex justify-end order-2 md:order-1">
                 <div class="relative w-full md:max-w-md bg-gradient-to-br from-white via-sage/10 to-gold/10 border border-sage/20 rounded-2xl shadow-sm overflow-visible px-0 py-0 group transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
                   <!-- Large left-side emoji badge -->
                   <div class="absolute scale-125 -left-8 top-1/2 -translate-y-1/2 z-20 hidden md:flex">
@@ -998,7 +1001,7 @@
             <div class="relative transition-all before:hidden md:before:block before:content-[''] before:absolute before:left-1/2 before:top-0 before:h-full before:w-1 before:bg-dusty-rose before:-translate-x-1/2 before:z-0 flex md:flex-row flex-col items-center" data-aos="fade" data-aos-delay="150">
               <div class="md:w-1/2 order-1 hidden md:block"></div>
               <div class="w-12 h-12 text-xl hidden md:flex bg-dusty-rose rounded-full items-center justify-center text-white font-bold shadow-lg mx-auto md:mx-0 order-2 md:order-2 mb-4 md:mb-0 z-20">4</div>
-              <div class="md:w-1/2 md:pl-8 flex justify-start order-3 md:order-3">
+              <div class="w-full md:w-1/2 md:pl-8 flex justify-start order-3 md:order-3">
                 <div class="relative w-full md:max-w-md bg-gradient-to-br from-white via-dusty-rose/10 to-gold/10 border border-dusty-rose/20 rounded-2xl shadow-sm overflow-visible px-0 py-0 group transition-all duration-300 hover:scale-[1.03] hover:shadow-md">
                   <!-- Large right-side emoji badge -->
                   <div class="absolute scale-125 -right-8 top-1/2 -translate-y-1/2 z-20 hidden md:flex">
@@ -2319,40 +2322,132 @@
           </div>
         </div>
 
-        <!-- Additional Information -->
-        <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="500">
-          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/50">
-            <div class="flex items-center justify-center mb-6">
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-gradient-to-br from-dusty-rose to-gold rounded-full flex items-center justify-center shadow-lg">
-                  <i class="fas fa-info text-white text-lg"></i>
+        <!-- Gift Information Section -->
+        <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="500">
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-4 bg-gradient-to-r from-dusty-rose/10 to-gold/10 rounded-full px-8 py-4 border border-dusty-rose/20">
+              <div class="w-10 h-10 bg-gradient-to-br from-dusty-rose to-gold rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-gift text-white text-lg"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-charcoal">Gift Information</h3>
+            </div>
+            <p class="text-charcoal/70 text-lg mt-4 max-w-2xl mx-auto">
+              Your presence is our greatest gift, but if you'd like to give something special, here's how
+            </p>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="grid lg:grid-cols-3 gap-8">
+            
+            <!-- Shipping Card -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+              <div class="relative bg-gradient-to-br from-white via-blush/20 to-white rounded-3xl shadow-xl overflow-hidden border border-dusty-rose/20 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-dusty-rose/10 to-transparent rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-gold/10 to-transparent rounded-tr-full"></div>
+                
+                <div class="relative p-8">
+                  <!-- Icon -->
+                  <div class="relative mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-dusty-rose to-gold rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="absolute -inset-2 bg-gradient-to-br from-dusty-rose/20 to-gold/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <!-- Content -->
+                  <h4 class="font-serif text-xl font-bold text-charcoal mb-4">Shipping Address</h4>
+                  <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Gifts can be shipped to our address or brought to the reception venue. We appreciate your thoughtfulness!
+                  </p>
+                  
+                  <!-- Action button -->
+                  <div class="flex items-center gap-2 text-dusty-rose font-medium text-sm">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View address details</span>
+                  </div>
                 </div>
-                <h4 class="font-serif text-xl font-semibold text-charcoal">Gift Information</h4>
               </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-              <div class="space-y-3">
-                <i class="fas fa-shipping-fast text-2xl text-dusty-rose mb-2"></i>
-                <h5 class="font-semibold text-charcoal">Shipping Address</h5>
-                <p class="text-charcoal/70 text-sm">
-                  Gifts can be shipped to our address or brought to the reception venue.
-                </p>
+
+            <!-- Address Card -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+              <div class="relative bg-gradient-to-br from-white via-sage/10 to-white rounded-3xl shadow-xl overflow-hidden border border-sage/20 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-sage/10 to-transparent rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-dusty-rose/10 to-transparent rounded-tr-full"></div>
+                
+                <div class="relative p-8">
+                  <!-- Icon -->
+                  <div class="relative mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sage to-dusty-rose rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="absolute -inset-2 bg-gradient-to-br from-sage/20 to-dusty-rose/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <!-- Content -->
+                  <h4 class="font-serif text-xl font-bold text-charcoal mb-4">Our Address</h4>
+                  <div class="bg-white/50 rounded-xl p-4 mb-6 border border-sage/20">
+                    <p class="text-charcoal font-medium text-center">
+                      123 Wedding Lane<br>
+                      <span class="text-charcoal/70">Napa Valley, CA 94558</span>
+                    </p>
+                  </div>
+                  
+                  <!-- Action button -->
+                  <div class="flex items-center gap-2 text-sage font-medium text-sm">
+                    <i class="fas fa-copy"></i>
+                    <span>Copy address</span>
+                  </div>
+                </div>
               </div>
-              <div class="space-y-3">
-                <i class="fas fa-map-marker-alt text-2xl text-gold mb-2"></i>
-                <h5 class="font-semibold text-charcoal">Our Address</h5>
-                <p class="text-charcoal/70 text-sm">
-                  123 Wedding Lane<br>
-                  Napa Valley, CA 94558
-                </p>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+              <div class="relative bg-gradient-to-br from-white via-gold/10 to-white rounded-3xl shadow-xl overflow-hidden border border-gold/20 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full"></div>
+                <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-sage/10 to-transparent rounded-tr-full"></div>
+                
+                <div class="relative p-8">
+                  <!-- Icon -->
+                  <div class="relative mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gold to-sage rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="absolute -inset-2 bg-gradient-to-br from-gold/20 to-sage/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <!-- Content -->
+                  <h4 class="font-serif text-xl font-bold text-charcoal mb-4">Questions?</h4>
+                  <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Contact us directly for any questions about gifts, our address, or wedding details.
+                  </p>
+                  
+                  <!-- Contact buttons -->
+                  <div class="space-y-3">
+                    <div class="flex items-center gap-3 text-gold font-medium text-sm">
+                      <i class="fas fa-envelope"></i>
+                      <span>Email us</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-gold font-medium text-sm">
+                      <i class="fas fa-phone"></i>
+                      <span>Call us</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="space-y-3">
-                <i class="fas fa-phone-alt text-2xl text-sage mb-2"></i>
-                <h5 class="font-semibold text-charcoal">Questions?</h5>
-                <p class="text-charcoal/70 text-sm">
-                  Contact us directly for any questions about gifts or our address.
-                </p>
-              </div>
+            </div>
+          </div>
+
+          <!-- Additional note -->
+          <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+            <div class="inline-flex items-center gap-3 bg-gradient-to-r from-charcoal/5 to-charcoal/10 rounded-full px-6 py-3 border border-charcoal/10">
+              <i class="fas fa-heart text-dusty-rose"></i>
+              <span class="text-charcoal/70 font-medium">Your presence is the greatest gift of all</span>
             </div>
           </div>
         </div>
