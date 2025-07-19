@@ -8,6 +8,16 @@
       name="description"
       content="Join us for our special day! Wedding details, RSVP, and more."
     />
+    <meta name="keywords" content="wedding, wedding website, Sarah Michael, Napa Valley, RSVP, wedding details, gallery, love story, wedding party, photo gallery, registry, honeymoon fund, event timeline" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sarah & Michael - Wedding Website" />
+    <meta property="og:description" content="Join us for our special day! Wedding details, RSVP, and more." />
+    <meta property="og:image" content="https://img.icons8.com/emoji/48/000000/wedding.png" />
+    <meta property="og:url" content="https://azamportfolio.my.id/wedding-landing/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon from the internet (alternative) -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/emoji/48/000000/wedding.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,6 +53,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   </head>
   <body class="font-sans text-charcoal">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+      <!-- Simple Loader -->
+      <div class="text-center">
+        <div class="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mx-auto mb-4"></div>
+        <p class="text-white text-lg">Loading...</p>
+      </div>
+    </div>
+
     <!-- Navigation -->
     <nav
       id="navbar"
@@ -303,18 +322,22 @@
 
           <!-- Call to Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade" data-aos-delay="100" data-aos-duration="500">
-            <button class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white/20 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl group">
-              <span class="flex items-center space-x-2">
-                <span>View Details</span>
-                <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
-              </span>
-            </button>
-            <button class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white/10 transition-all duration-300 ease-in-out hover:scale-105 group">
-              <span class="flex items-center space-x-2">
-                <span>RSVP Now</span>
-                <i class="fas fa-heart text-sm group-hover:scale-110 transition-transform"></i>
-              </span>
-            </button>
+            <a href="#details">
+              <button class="bg-white/10 backdrop-blur-sm cursor-pointer border border-white/30 text-white px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white/20 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl group">
+                <span class="flex items-center space-x-2">
+                  <span>View Details</span>
+                  <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </span>
+              </button>
+            </a>
+            <a href="#rsvp">
+              <button class="bg-transparent cursor-pointer border border-white/30 text-white px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white/10 transition-all duration-300 ease-in-out hover:scale-105 group">
+                <span class="flex items-center space-x-2">
+                  <span>RSVP Now</span>
+                  <i class="fas fa-heart text-sm group-hover:scale-110 transition-transform"></i>
+                </span>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -672,12 +695,19 @@
                     </div>
                   </div>
                 </div>
-                <button
-                  class="mt-8 w-full bg-gradient-to-r from-dusty-rose to-dusty-rose/90 text-white px-8 py-4 rounded-xl font-medium hover:from-dusty-rose/90 hover:to-dusty-rose/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1600+Atlas+Peak+Rd,+Napa,+CA+94558"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block w-full cursor-pointer"
                 >
-                  <i class="fas fa-map-marked-alt mr-2"></i>
-                  View on Map
-                </button>
+                  <button
+                    class="w-full mt-8 bg-gradient-to-r from-dusty-rose to-dusty-rose/90 text-white px-8 py-4 rounded-xl font-medium hover:from-dusty-rose/90 hover:to-dusty-rose/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <i class="fas fa-map-marked-alt mr-2"></i>
+                    View on Map
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -728,12 +758,19 @@
                     </div>
                   </div>
                 </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1600+Atlas+Peak+Rd,+Napa,+CA+94558"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block w-full cursor-pointer"
+                >
                 <button
                   class="mt-8 w-full bg-gradient-to-r from-sage to-sage/90 text-white px-8 py-4 rounded-xl font-medium hover:from-sage/90 hover:to-sage/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <i class="fas fa-map-marked-alt mr-2"></i>
                   View on Map
                 </button>
+                </a>
               </div>
             </div>
           </div>
@@ -2363,10 +2400,12 @@
                   </p>
                   
                   <!-- Action button -->
-                  <div class="flex items-center gap-2 text-dusty-rose font-medium text-sm">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>View address details</span>
-                  </div>
+                  <a href="#details">
+                    <div class="flex items-center gap-2 text-dusty-rose font-medium text-sm">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View address details</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2397,10 +2436,10 @@
                   </div>
                   
                   <!-- Action button -->
-                  <div class="flex items-center gap-2 text-sage font-medium text-sm">
-                    <i class="fas fa-copy"></i>
-                    <span>Copy address</span>
-                  </div>
+                  <a href="https://www.google.com/maps/search/?api=1&query=123+Wedding+Lane,+Napa+Valley,+CA+94558" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sage font-medium text-sm hover:underline transition-all">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Map address</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2429,14 +2468,12 @@
                   
                   <!-- Contact buttons -->
                   <div class="space-y-3">
-                    <div class="flex items-center gap-3 text-gold font-medium text-sm">
-                      <i class="fas fa-envelope"></i>
-                      <span>Email us</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-gold font-medium text-sm">
-                      <i class="fas fa-phone"></i>
-                      <span>Call us</span>
-                    </div>
+                    <a href="#contact">
+                      <div class="flex items-center gap-3 text-gold font-medium text-sm">
+                        <i class="fas fa-phone"></i>
+                        <span>Contact us</span>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>

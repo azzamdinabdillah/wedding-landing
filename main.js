@@ -5,6 +5,16 @@ import VanillaTilt from 'vanilla-tilt'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+window.addEventListener('DOMContentLoaded', () => {
+  hideLoadingScreen()
+})
+const hideLoadingScreen = () => {
+  const loadingScreen = document.getElementById('loading-screen')
+  
+  loadingScreen.classList.add('opacity-0', 'transition-opacity', 'duration-500', 'ease-out')
+  loadingScreen.parentNode.removeChild(loadingScreen)
+}
+
 // Initialize AOS
 AOS.init({
   duration: 500,
