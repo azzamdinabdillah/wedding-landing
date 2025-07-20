@@ -1,205 +1,237 @@
-# Wedding Website Landing Page Template
+# Elegance - Wedding Website Template
 
-A beautiful, romantic wedding website template built with Vite, HTML5, Tailwind CSS, and modern JavaScript libraries.
+## 📋 Overview
+Elegance is a modern, responsive wedding website template built with HTML, Tailwind CSS, and vanilla JavaScript. Perfect for couples who want to create a beautiful wedding website without technical knowledge.
 
-## Features
+## 🚀 Quick Start Guide
 
-### Core Functionality
-- **Responsive Design**: Mobile-first approach with optimized layouts for all devices
-- **Interactive Hero Section**: Full-screen hero with couple's names, date, and live countdown timer
-- **Smooth Navigation**: Sticky navigation with smooth scrolling to sections
-- **Photo Gallery**: Interactive gallery with lightbox functionality
-- **RSVP System**: Complete form with email integration via EmailJS
-- **Wedding Details**: Ceremony and reception information with map integration
-- **Timeline**: Beautiful event timeline for the wedding day
+### Prerequisites
+- A computer with internet connection
+- A text editor (we recommend Visual Studio Code - free download from https://code.visualstudio.com/)
+- A web browser (Chrome, Firefox, Safari, or Edge)
 
-### Technical Features
-- **Advanced Animations**: GSAP-powered animations with scroll triggers
-- **Modern Libraries**: Utilizes industry-standard NPM packages
-- **Performance Optimized**: Lazy loading, image optimization, and code splitting
-- **Accessibility**: WCAG 2.1 AA compliant with keyboard navigation support
-- **SEO Optimized**: Proper meta tags and semantic HTML structure
+### Installation Steps
 
-## Design Elements
+#### Step 1: Download and Extract
+1. Download the template files
+2. Extract the ZIP file to a folder on your computer
+3. Open the folder to see all the files
 
-### Color Palette
-- **Primary**: Soft blush pink (#F8E8E8) and warm ivory (#FFF8F0)
-- **Secondary**: Dusty rose (#D4A574) and sage green (#9CAF88)
-- **Accent**: Gold (#D4AF37) for highlights and CTAs
-- **Neutral**: Charcoal gray (#2D3748) for text, light gray (#F7FAFC) for backgrounds
+#### Step 2: Install Node.js (Required)
+1. Go to https://nodejs.org/
+2. Download the "LTS" version (recommended)
+3. Run the installer and follow the installation steps
+4. Restart your computer
 
-### Typography
-- **Headings**: Playfair Display (elegant serif)
-- **Body Text**: Inter (clean sans-serif)
-- **Font Weights**: 3 weights maximum for optimal performance
+#### Step 3: Setup the Project
+1. Open Command Prompt (Windows) or Terminal (Mac/Linux)
+2. Navigate to your project folder:
+   ```bash
+   cd path/to/your/wedding-website-folder
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Animations
-- **Scroll Animations**: AOS (Animate On Scroll) for reveal effects
-- **Advanced Animations**: GSAP with ScrollTrigger for complex interactions
-- **Micro-interactions**: Hover effects, transitions, and subtle animations
+#### Step 4: Run the Website
+1. In the same terminal, run:
+   ```bash
+   npm run dev
+   ```
+2. Open your browser and go to: `http://localhost:5173`
+3. You should see your wedding website!
 
-## NPM Libraries Used
+## ✏️ How to Customize Your Website
 
-### Core Libraries
-- **GSAP**: Advanced animations and scroll effects
-- **Swiper**: Touch-friendly carousels and sliders
-- **GLightbox**: Modern lightbox for photo gallery
-- **CountUp.js**: Animated countdown timer
-- **EmailJS**: Contact form and RSVP submissions
-- **Vanilla-tilt**: Subtle tilt effects on cards
-- **date-fns**: Date formatting and calculations
-- **AOS**: Animate on scroll library
+### Basic Customization (No Coding Required)
 
-### Styling
-- **Tailwind CSS**: Utility-first CSS framework
-- **@tailwindcss/forms**: Form styling plugins
-- **@tailwindcss/typography**: Typography enhancements
+#### 1. Change Couple Names
+- Open `index.html` in a text editor
+- Find and replace "Sarah & Michael" with your names
+- Save the file and refresh your browser
 
-## Setup Instructions
+#### 2. Update Wedding Date
+- In `index.html`, find the countdown section
+- Change the date in the JavaScript section
+- Look for: `const weddingDate = new Date('2024-06-15T16:00:00');`
+- Replace with your wedding date
 
-### 1. Installation
-```bash
-npm install
+#### 3. Change Wedding Location
+- Find the venue information in the Details section
+- Update the venue name and address
+- Update the Google Maps link
+
+#### 4. Replace Photos
+- Place your photos in the `production/` folder
+- Update image URLs in `index.html`
+- Recommended image sizes:
+  - Hero background: 1920x1080px
+  - Gallery images: 800x600px
+  - Profile photos: 400x400px
+
+#### 5. Update Love Story
+- Find the "Our Story" section
+- Replace the story content with your own
+- Update dates and locations
+- Add your own photos
+
+#### 6. Customize Colors
+- Open `style.css`
+- Find the color variables at the top
+- Change the hex color codes to your preferred colors
+
+### Advanced Customization
+
+#### 1. Adding New Sections
+- Copy an existing section in `index.html`
+- Modify the content and styling
+- Add navigation links
+
+#### 2. Changing Fonts
+- Go to Google Fonts (https://fonts.google.com/)
+- Select your preferred fonts
+- Update the font links in the `<head>` section
+
+#### 3. Adding Animations
+- The template uses AOS (Animate On Scroll)
+- Add `data-aos="fade-up"` to any element
+- Available animations: fade, slide, zoom, flip
+
+## 📁 File Structure
+
+```
+wedding-landing/
+├── index.html          # Main website file
+├── style.css           # Custom styles
+├── main.js             # JavaScript functionality
+├── package.json        # Project configuration
+├── vite.config.js      # Build configuration
+├── production/         # Image folder
+│   ├── all.png
+│   ├── c-1.png
+│   └── ...
+└── README.md          # This file
 ```
 
-### 2. Development Server
-```bash
-npm run dev
-```
+## 🎨 Customization Guide
 
-### 3. Build for Production
-```bash
-npm run build
-```
+### Colors
+The template uses these main colors:
+- Dusty Rose: #d4a574
+- Sage: #9caf88
+- Gold: #d4af37
+- Ivory: #fff8f0
+- Charcoal: #2d3748
 
-### 4. Preview Production Build
-```bash
-npm run preview
-```
+### Fonts
+- Headings: Playfair Display
+- Body text: Inter
 
-## Customization Guide
+### Sections Available
+1. **Hero Section** - Main landing area with countdown
+2. **Love Story** - Timeline of your relationship
+3. **Wedding Details** - Ceremony and reception info
+4. **Event Timeline** - Day-of schedule
+5. **Wedding Party** - Bridesmaids and groomsmen
+6. **Photo Gallery** - Image showcase
+7. **RSVP Form** - Guest response system
+8. **Contact** - Location and contact info
+
+## 🔧 Technical Features
+
+### Built With
+- **HTML5** - Structure
+- **Tailwind CSS** - Styling
+- **Vanilla JavaScript** - Interactivity
+- **Vite** - Build tool
+- **AOS** - Scroll animations
+- **GLightbox** - Photo gallery
+- **EmailJS** - Contact form
+
+### Browser Support
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+### Mobile Responsive
+- Works on all screen sizes
+- Touch-friendly navigation
+- Optimized for mobile viewing
+
+## 📧 Contact Form Setup
 
 ### EmailJS Configuration
-1. Sign up for EmailJS at https://www.emailjs.com/
-2. Create a service and template
-3. Replace the following in `main.js`:
-   - `YOUR_USER_ID` with your EmailJS user ID
-   - `YOUR_SERVICE_ID` with your service ID
-   - `YOUR_TEMPLATE_ID` with your template ID
+1. Go to https://www.emailjs.com/
+2. Create a free account
+3. Set up an email service
+4. Update the EmailJS configuration in `main.js`
 
-### Content Customization
-1. **Couple Names**: Update in `index.html` throughout the document
-2. **Wedding Date**: Change date in countdown and content sections
-3. **Venue Information**: Update ceremony and reception details
-4. **Photos**: Replace Pexels URLs with your own photos
-5. **Colors**: Modify color palette in `tailwind.config.js`
+### Alternative: Simple Email
+Replace the contact form with a simple mailto link:
+```html
+<a href="mailto:your-email@example.com">Contact Us</a>
+```
 
-### Photo Guidelines
-- **Hero Image**: 1920x1080px minimum, landscape orientation
-- **Gallery Images**: 800x600px minimum, various orientations
-- **Wedding Party**: 300x300px, square format
-- **Format**: Use WebP for better performance with JPG fallbacks
+## 🚀 Deployment
 
-## Performance Optimization
+### Option 1: GitHub Pages (Free)
+1. Create a GitHub account
+2. Upload your files to a new repository
+3. Enable GitHub Pages in repository settings
+4. Your website will be live at: `https://yourusername.github.io/repositoryname`
 
-### Image Optimization
-- Use WebP format with JPG fallbacks
-- Implement lazy loading for below-fold images
-- Compress images to reduce file size
-- Use appropriate image dimensions
+### Option 2: Netlify (Free)
+1. Go to https://netlify.com/
+2. Drag and drop your project folder
+3. Your website will be live instantly
 
-### Code Optimization
-- Tree-shaking for unused CSS/JS
-- Code splitting for vendor libraries
-- Minification in production build
-- Gzip compression enabled
+### Option 3: Traditional Web Hosting
+1. Purchase web hosting (GoDaddy, HostGator, etc.)
+2. Upload files via FTP
+3. Point your domain to the hosting
 
-### Loading Performance
-- Critical CSS inlined
-- Non-critical resources deferred
-- Preload important fonts
-- Optimize third-party scripts
+## 🛠️ Troubleshooting
 
-## Browser Support
+### Common Issues
 
-### Modern Browsers
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+#### Website Not Loading
+- Check if Node.js is installed: `node --version`
+- Make sure you're in the correct folder
+- Try running `npm install` again
 
-### Progressive Enhancement
-- Graceful degradation for older browsers
-- Fallbacks for unsupported features
-- Polyfills for critical functionality
+#### Images Not Showing
+- Check if image files exist in the correct folder
+- Verify image file names match the code
+- Ensure image files are not corrupted
 
-## Accessibility Features
+#### Styling Issues
+- Clear browser cache (Ctrl+F5)
+- Check if all CSS files are loaded
+- Verify Tailwind CSS is properly installed
 
-### WCAG 2.1 AA Compliance
-- Proper heading hierarchy
-- Alt text for all images
-- Keyboard navigation support
-- Screen reader compatibility
-- High contrast color ratios
-- Focus indicators
-- Reduced motion support
+#### Contact Form Not Working
+- Check EmailJS configuration
+- Verify email service is set up
+- Test with a simple email link first
 
-### Keyboard Navigation
-- Tab order optimization
-- Skip links for screen readers
-- Escape key functionality
-- Enter key activation
+### Getting Help
+1. Check this README file
+2. Look at the code comments in the files
+3. Search for solutions online
+4. Contact support if needed
 
-## SEO Optimization
+## 📝 License
+This template is for personal and commercial use. Please read the license file for details.
 
-### Meta Tags
-- Title and description optimization
-- Open Graph tags for social sharing
-- Schema markup for events
-- Proper canonical URLs
+## 🙏 Support
+If you need help with customization or have questions:
+1. Check the documentation above
+2. Look at the code comments
+3. Search online for solutions
+4. Contact the template provider
 
-### Content Structure
-- Semantic HTML5 elements
-- Proper heading hierarchy
-- Alt text for images
-- Descriptive link text
+---
 
-## Deployment
-
-### Static Hosting
-- Netlify (recommended)
-- Vercel
-- GitHub Pages
-- Firebase Hosting
-
-### Build Process
-1. Run `npm run build`
-2. Upload `dist` folder to hosting provider
-3. Configure redirects if needed
-4. Set up SSL certificate
-
-## Maintenance
-
-### Regular Updates
-- Keep NPM packages updated
-- Monitor for security vulnerabilities
-- Update content as needed
-- Test across browsers regularly
-
-### Performance Monitoring
-- Use Lighthouse for performance audits
-- Monitor Core Web Vitals
-- Track loading times
-- Optimize based on analytics
-
-## Support
-
-For questions or issues:
-- Check the documentation
-- Review example implementations
-- Test with different browsers
-- Validate HTML and CSS
-
-## License
-
-This template is provided as-is for personal and commercial use. Please ensure you have proper licensing for any photos or assets used.
+**Happy Wedding Planning! 💕**

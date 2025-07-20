@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Wedding Template - Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #d4a574;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .navigation {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            background: linear-gradient(135deg, #d4a574 0%, #9caf88 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #d4a574 0%, #9caf88 100%);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .section-content {
+            padding: 30px;
+        }
+        
+        .section-content h3 {
+            color: #d4a574;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .section-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .step {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .step-header {
+            background: linear-gradient(135deg, #d4a574 0%, #9caf88 100%);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            padding: 30px;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #155724;
+        }
+        
+        .tip {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #0c5460;
+        }
+        
+        .file-location {
+            background: #e2e3e5;
+            border: 1px solid #d6d8db;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #495057;
+        }
+        
+        .before-after {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .before, .after {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .before h4, .after h4 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .before {
+            border-color: #dc3545;
+        }
+        
+        .after {
+            border-color: #28a745;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .color-item {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .color-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 3px solid white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .color-name {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .color-code {
+            font-size: 0.8em;
+            color: #666;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .image-guidelines {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .image-guidelines h4 {
+            color: #d4a574;
+            margin-bottom: 15px;
+        }
+        
+        .image-spec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .image-spec:last-child {
+            border-bottom: none;
+        }
+        
+        .customization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .customization-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #d4a574;
+        }
+        
+        .customization-item h4 {
+            color: #d4a574;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .checklist h4 {
+            color: #d4a574;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        
+        .checklist-item label {
+            flex: 1;
+            cursor: pointer;
+        }
+        
+        .checklist-item.completed {
+            color: #28a745;
+        }
+        
+        .checklist-item.completed label {
+            text-decoration: line-through;
+        }
+        
+        .problem {
+            background: #f8f9fa;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .solution {
+            background: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .footer h2 {
+            color: #d4a574;
+            margin-bottom: 15px;
+        }
+        
+        .footer p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .quick-start {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .quick-start-header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .quick-start-content {
+            padding: 30px;
+        }
+        
+        .quick-step {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        
+        .quick-step h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        
+        .example {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #155724;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎉 Elegance Wedding Template - Complete Guide</h1>
+            <p>Everything you need to set up, customize, and deploy your wedding website</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="nav-links">
+                <a href="#quick-start" class="nav-link">⚡ Quick Start</a>
+                <a href="#setup" class="nav-link">📋 Setup Guide</a>
+                <a href="#customization" class="nav-link">🎨 Customization</a>
+                <a href="#troubleshooting" class="nav-link">🛠️ Troubleshooting</a>
+                <a href="#deployment" class="nav-link">🚀 Deployment</a>
+            </div>
+        </div>
+
+        <!-- Quick Start Section -->
+        <div id="quick-start" class="quick-start">
+            <div class="quick-start-header">
+                ⚡ Quick Start - Get Running in 5 Minutes
+            </div>
+            <div class="quick-start-content">
+                <div class="quick-step">
+                    <h4>1️⃣ Install Node.js</h4>
+                    <p>Go to <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+                    <p>Download the "LTS" version and install</p>
+                    <div class="important">
+                        <strong>⚠️ Important:</strong> Download "LTS", not "Current"
+                    </div>
+                </div>
+                
+                <div class="quick-step">
+                    <h4>2️⃣ Setup Project</h4>
+                    <p>Open Command Prompt/Terminal and run:</p>
+                    <div class="code-block">
+cd path/to/your/wedding-website-folder
+npm install
+                    </div>
+                </div>
+                
+                <div class="quick-step">
+                    <h4>3️⃣ Run Website</h4>
+                    <p>In the same terminal, run:</p>
+                    <div class="code-block">
+npm run dev
+                    </div>
+                    <p>Open browser to: <code>http://localhost:5173</code></p>
+                </div>
+                
+                <div class="quick-step">
+                    <h4>4️⃣ Basic Changes</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Change "Sarah & Michael" to your names in <code>index.html</code></li>
+                        <li>Update wedding date in <code>main.js</code></li>
+                        <li>Replace venue info in Details section</li>
+                        <li>Add your photos to <code>public/</code> folder</li>
+                    </ul>
+                </div>
+                
+                <div class="quick-step">
+                    <h4>5️⃣ Deploy</h4>
+                    <div class="code-block">
+npm run build
+                    </div>
+                    <p>Upload the <code>dist</code> folder to Netlify, GitHub Pages, or your hosting</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setup Guide Section -->
+        <div id="setup" class="section">
+            <div class="section-header">
+                📋 Complete Setup Guide
+            </div>
+            <div class="section-content">
+                
+                <!-- Prerequisites -->
+                <div class="step">
+                    <div class="step-header">
+                        📋 Prerequisites - What You Need
+                    </div>
+                    <div class="step-content">
+                        <h3>Before You Start</h3>
+                        <p>Make sure you have these items ready:</p>
+                        <ul style="margin-left: 20px; margin-top: 15px;">
+                            <li>✅ A computer with internet connection</li>
+                            <li>✅ A text editor (download Visual Studio Code for free)</li>
+                            <li>✅ A web browser (Chrome recommended)</li>
+                            <li>✅ Your wedding photos and information</li>
+                        </ul>
+                        
+                        <div class="tip">
+                            <strong>💡 Tip:</strong> Visual Studio Code is the best free text editor. Download it from <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Download and Extract -->
+                <div class="step">
+                    <div class="step-header">
+                        📥 Step 1: Download and Extract Files
+                    </div>
+                    <div class="step-content">
+                        <h3>Getting Your Template Files</h3>
+                        <p>1. Download the template ZIP file</p>
+                        <p>2. Right-click the ZIP file and select "Extract All"</p>
+                        <p>3. Choose a folder location (like Desktop)</p>
+                        <p>4. Open the extracted folder to see all files</p>
+                        
+                        <div class="bg-gray-100 rounded-lg p-4 my-4 overflow-x-auto">
+                            <pre class="text-sm font-mono text-gray-800 leading-relaxed">
+wedding-landing/
+├── <span class="text-blue-700 font-semibold">index.html</span>          <span class="text-gray-500"># Main website file</span>
+├── <span class="text-green-700 font-semibold">style.css</span>           <span class="text-gray-500"># Custom styles</span>
+├── <span class="text-yellow-700 font-semibold">main.js</span>             <span class="text-gray-500"># JavaScript functionality</span>
+├── <span class="text-pink-700 font-semibold">package.json</span>        <span class="text-gray-500"># Project configuration</span>
+├── <span class="text-purple-700 font-semibold">vite.config.js</span>      <span class="text-gray-500"># Build configuration</span>
+├── <span class="text-gray-700 font-semibold">public/</span>             <span class="text-gray-500"># Image folder</span>
+│   ├── all.png
+│   ├── c-1.png
+│   └── ...
+└── <span class="text-indigo-700 font-semibold">README.md</span>          <span class="text-gray-500"># Documentation</span>
+                            </pre>
+                        </div>
+                        
+                        <div class="success">
+                            <strong>✅ Success:</strong> You should see all these files in your folder
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Install Node.js -->
+                <div class="step">
+                    <div class="step-header">
+                        ⚙️ Step 2: Install Node.js (Required)
+                    </div>
+                    <div class="step-content">
+                        <h3>Installing the Required Software</h3>
+                        <p>Node.js is required to run the website. Here's how to install it:</p>
+                        
+                        <ol style="margin-left: 20px; margin-top: 15px;">
+                            <li>Go to <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></li>
+                            <li>Click the big green "LTS" button to download</li>
+                            <li>Run the downloaded installer</li>
+                            <li>Follow the installation wizard (click "Next" for all options)</li>
+                            <li>Restart your computer</li>
+                        </ol>
+                        
+                        <div class="warning">
+                            <strong>⚠️ Important:</strong> Make sure to download the "LTS" version, not the "Current" version
+                        </div>
+                        
+                        <div class="tip">
+                            <strong>💡 Tip:</strong> After installation, you can verify it worked by opening Command Prompt and typing: <code>node --version</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Setup Project -->
+                <div class="step">
+                    <div class="step-header">
+                        🔧 Step 3: Setup Your Project
+                    </div>
+                    <div class="step-content">
+                        <h3>Installing Dependencies</h3>
+                        <p>Now you need to install the required packages:</p>
+                        
+                        <ol style="margin-left: 20px; margin-top: 15px;">
+                            <li>Open Command Prompt (Windows) or Terminal (Mac/Linux)</li>
+                            <li>Navigate to your project folder using the <code>cd</code> command</li>
+                            <li>Type this command and press Enter:</li>
+                        </ol>
+                        
+                        <div class="code-block">
+npm install
+                        </div>
+                        
+                        <p>Wait for the installation to complete (this may take a few minutes)</p>
+                        
+                        <div class="success">
+                            <strong>✅ Success:</strong> You should see a "node_modules" folder created in your project
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Run Website -->
+                <div class="step">
+                    <div class="step-header">
+                        🚀 Step 4: Run Your Website
+                    </div>
+                    <div class="step-content">
+                        <h3>Starting the Development Server</h3>
+                        <p>Now you can view your website:</p>
+                        
+                        <ol style="margin-left: 20px; margin-top: 15px;">
+                            <li>In the same terminal/command prompt, type:</li>
+                        </ol>
+                        
+                        <div class="code-block">
+npm run dev
+                        </div>
+                        
+                        <p>2. Wait for the message "Local: http://localhost:5173"</p>
+                        <p>3. Open your web browser</p>
+                        <p>4. Go to: <code>http://localhost:5173</code></p>
+                        
+                        <div class="success">
+                            <strong>🎉 Congratulations!</strong> You should now see your wedding website running!
+                        </div>
+                        
+                        <div class="tip">
+                            <strong>💡 Tip:</strong> Keep the terminal window open while working on your website. To stop the server, press Ctrl+C
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customization Section -->
+        <div id="customization" class="section">
+            <div class="section-header">
+                🎨 Customization Guide
+            </div>
+            <div class="section-content">
+                
+                <!-- Basic Text Changes -->
+                <h3>1. Change Couple Names</h3>
+                <p>Find and replace all instances of "Sarah & Michael" with your names:</p>
+                
+                <div class="file-location">File: index.html</div>
+                
+                <div class="before-after">
+                    <div class="before">
+                        <h4>Before</h4>
+                        <div class="code-block">
+&lt;title&gt;Sarah & Michael - Wedding Website&lt;/title&gt;
+&lt;h1&gt;Sarah & Michael&lt;/h1&gt;
+                        </div>
+                    </div>
+                    <div class="after">
+                        <h4>After</h4>
+                        <div class="code-block">
+&lt;title&gt;John & Jane - Wedding Website&lt;/title&gt;
+&lt;h1&gt;John & Jane&lt;/h1&gt;
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Tip:</strong> Use Ctrl+F (or Cmd+F on Mac) to find all instances quickly
+                </div>
+                
+                <h3>2. Update Wedding Date</h3>
+                <p>Change the countdown timer date:</p>
+                
+                <div class="file-location">File: main.js (around line 50)</div>
+                
+                <div class="code-block">
+// Find this line and change the date
+const weddingDate = new Date('2024-06-15T16:00:00');
+
+// Change to your wedding date, for example:
+const weddingDate = new Date('2024-12-25T14:00:00');
+                </div>
+                
+                <div class="highlight">
+                    <strong>⚠️ Important:</strong> Use the format: YYYY-MM-DDTHH:MM:SS (24-hour format)
+                </div>
+                
+                <h3>3. Photo Customization</h3>
+                <div class="image-guidelines">
+                    <h4>Recommended Image Sizes:</h4>
+                    
+                    <div class="image-spec">
+                        <span><strong>Hero Background:</strong></span>
+                        <span>1920x1080px (landscape)</span>
+                    </div>
+                    
+                    <div class="image-spec">
+                        <span><strong>Gallery Images:</strong></span>
+                        <span>800x600px (various orientations)</span>
+                    </div>
+                    
+                    <div class="image-spec">
+                        <span><strong>Profile Photos:</strong></span>
+                        <span>400x400px (square)</span>
+                    </div>
+                    
+                    <div class="image-spec">
+                        <span><strong>Story Images:</strong></span>
+                        <span>600x400px (landscape)</span>
+                    </div>
+                </div>
+                
+                <h3>4. Color Customization</h3>
+                <p>The template uses these main colors:</p>
+                
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-box" style="background: #d4a574;"></div>
+                        <div class="color-name">Dusty Rose</div>
+                        <div class="color-code">#d4a574</div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #9caf88;"></div>
+                        <div class="color-name">Sage</div>
+                        <div class="color-code">#9caf88</div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #d4af37;"></div>
+                        <div class="color-name">Gold</div>
+                        <div class="color-code">#d4af37</div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-box" style="background: #fff8f0;"></div>
+                        <div class="color-name">Ivory</div>
+                        <div class="color-code">#fff8f0</div>
+                    </div>
+                </div>
+                
+                <p>To change colors, edit the color variables in <code>style.css</code></p>
+                
+                <h3>5. Contact Form Setup</h3>
+                <p>To make the contact form functional:</p>
+                
+                <ol style="margin-left: 20px; margin-top: 15px;">
+                    <li>Go to <a href="https://www.emailjs.com/" target="_blank">https://www.emailjs.com/</a></li>
+                    <li>Create a free account</li>
+                    <li>Set up an email service (Gmail, Outlook, etc.)</li>
+                    <li>Create an email template</li>
+                    <li>Update the configuration in <code>main.js</code></li>
+                </ol>
+                
+                <div class="tip">
+                    <strong>💡 Alternative:</strong> If you don't want to set up EmailJS, replace the contact form with a simple email link:
+                </div>
+                
+                <div class="code-block">
+&lt;a href="mailto:your-email@example.com"&gt;Contact Us&lt;/a&gt;
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting Section -->
+        <div id="troubleshooting" class="section">
+            <div class="section-header">
+                🛠️ Troubleshooting Common Issues
+            </div>
+            <div class="section-content">
+                
+                <div class="problem">
+                    <strong>❌ Problem:</strong> Website not loading
+                </div>
+                <div class="solution">
+                    <strong>✅ Solution:</strong> Check if Node.js is installed by typing <code>node --version</code> in terminal
+                </div>
+                
+                <div class="problem">
+                    <strong>❌ Problem:</strong> Images not showing
+                </div>
+                <div class="solution">
+                    <strong>✅ Solution:</strong> Check if image files exist in the correct folder and file names match exactly
+                </div>
+                
+                <div class="problem">
+                    <strong>❌ Problem:</strong> Styling looks wrong
+                </div>
+                <div class="solution">
+                    <strong>✅ Solution:</strong> Clear browser cache (Ctrl+F5) and check if all CSS files are loaded
+                </div>
+                
+                <div class="problem">
+                    <strong>❌ Problem:</strong> Contact form not working
+                </div>
+                <div class="solution">
+                    <strong>✅ Solution:</strong> Check EmailJS configuration or replace with a simple email link
+                </div>
+                
+                <div class="checklist">
+                    <h4>Installation Checklist</h4>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="nodejs">
+                        <label for="nodejs">Node.js is installed (check with: node --version)</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="folder">
+                        <label for="folder">You're in the correct project folder</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="install">
+                        <label for="install">npm install was run successfully</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="dev">
+                        <label for="dev">npm run dev is running</label>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <input type="checkbox" id="browser">
+                        <label for="browser">You're visiting http://localhost:5173</label>
+                    </div>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Getting Help:</strong> If you're still having issues, check the documentation, look at code comments, or search online for solutions
+                </div>
+            </div>
+        </div>
+
+        <!-- Deployment Section -->
+        <div id="deployment" class="section">
+            <div class="section-header">
+                🚀 Deployment Guide
+            </div>
+            <div class="section-content">
+                
+                <h3>Building for Production</h3>
+                <p>When ready to deploy:</p>
+                
+                <div class="code-block">
+npm run build
+                </div>
+                
+                <p>This creates a <code>dist</code> folder with optimized files for hosting.</p>
+                
+                <h3>Deployment Options</h3>
+                
+                <div class="customization-grid">
+                    <div class="customization-item">
+                        <h4>🌐 Netlify (Recommended)</h4>
+                        <p>1. Go to <a href="https://netlify.com/" target="_blank">https://netlify.com/</a></p>
+                        <p>2. Drag and drop the dist folder</p>
+                        <p>3. Your website will be live instantly!</p>
+                    </div>
+                    
+                    <div class="customization-item">
+                        <h4>📚 GitHub Pages</h4>
+                        <p>1. Create a GitHub account</p>
+                        <p>2. Create a new repository</p>
+                        <p>3. Upload your files</p>
+                        <p>4. Enable GitHub Pages in settings</p>
+                    </div>
+                    
+                    <div class="customization-item">
+                        <h4>🏢 Traditional Hosting</h4>
+                        <p>1. Purchase web hosting (GoDaddy, HostGator, etc.)</p>
+                        <p>2. Upload files via FTP</p>
+                        <p>3. Point your domain to the hosting</p>
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <strong>✅ Success:</strong> Your wedding website is now live and ready to share with guests!
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Tip:</strong> Use Netlify for the easiest deployment - just drag and drop!
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>🎉 You're Ready to Go!</h2>
+            <p>Your wedding website is now set up, customized, and ready to impress your guests</p>
+            <p>Remember to test everything before sharing with your guests</p>
+            <p>Happy wedding planning! 💕</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Checklist functionality
+        document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const item = this.closest('.checklist-item');
+                if (this.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
